@@ -10,13 +10,15 @@ body {
 }
 
 .dark-mode {
-  background-color: #0f000d;
-  color: white;
+  background-color: #0f000d; /* Sets a very dark purple background when dark mode is active */
+  color: white; /* Changes all text inside to white for contrast */
+
 }
 
 #header {
-  display: flex;
-  justify-content: end;
+  display: flex; /* Uses flexbox layout for the dark mode toggle button */
+  justify-content: end; /* Aligns the dark mode toggle button to the right end */
+  font-family: Verdana; /* Applies Verdana font style to the header */
 }
 
 #stopwatch-container {
@@ -52,6 +54,8 @@ body {
     148,
     235
   ); /* Changes start button background to light pink on hover */
+  transform: scale(0.9);     /* Shrinks button to 90% of its size */
+  transition: transform 0.2s ease;  /* Smooth animation when shrinking */
 }
 
 #stop-button:hover {
@@ -60,6 +64,8 @@ body {
     148,
     235
   ); /* Changes start button background to light pink on hover */
+  transform: scale(0.9);     /* Shrinks button to 90% of its size */
+  transition: transform 0.2s ease;  /* Smooth animation when shrinking */
 }
 
 #reset-button:hover {
@@ -68,6 +74,8 @@ body {
     148,
     235
   ); /* Changes start button background to light pink on hover */
+  transform: scale(0.9);     /* Shrinks button to 90% of its size */
+  transition: transform 0.2s ease;  /* Smooth animation when shrinking */
 }
 
 #clock-display {
@@ -103,7 +111,8 @@ button {
   #stopwatch-container {
     flex-direction: column; /* Stack the items vertically */
     gap: 15px; /* Add space between elements */
-    width: 100%; /* Make it responsive */
+    height: fit-content; /* Container height adjusts to fit the stopwatch and controls */
+    width: fit-content; /* Container width adjusts to fit the stopwatch and controls */
   }
 
   #clock-display {
