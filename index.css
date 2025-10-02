@@ -1,0 +1,117 @@
+body {
+  text-align: center; /* Centers inline text and elements horizontally on the page */
+  color: rgb(255, 255, 255); /* Sets the text color to white */
+  background-color: rgb(
+    95,
+    0,
+    119
+  ); /* Sets the background color to a shade of purple*/
+  font-family: Verdana; /* Applies Verdana font to all text */
+}
+
+.dark-mode {
+  background-color: #0f000d;
+  color: white;
+}
+
+#header {
+  display: flex;
+  justify-content: end;
+}
+
+#stopwatch-container {
+  height: fit-content; /* Container height adjusts to fit the stopwatch and controls */
+  width: fit-content; /* Container width adjusts to fit the stopwatch and controls */
+  margin: auto; /* Centers the container horizontally*/
+  max-width: 1280px; /* Ensures container doesn’t stretch beyond 1280px */
+  padding: 20px; /* Adds space inside the container around the content */
+  border: 3px solid; /* Adds a solid border with 3px thickness */
+  border-radius: 5px; /* Rounds the corners of the container */
+  background-color: rgb(
+    247,
+    184,
+    235
+  ); /* Sets a light pink color as the stopwatch background color*/
+}
+
+.timer-button {
+  width: 100px; /* Sets the button width to 100 pixels */
+  height: 30px; /* Sets the button height to 30 pixels */
+  border: 2px solid; /* Adds a solid border with 2px thickness */
+  border-radius: 5%; /* Rounds the button corners by 5% */
+  padding: 5px; /* Adds space inside the button around its text */
+  background-color: purple; /* Sets the button background color to purple */
+  color: rgb(255, 255, 255); /* Sets the button text color to white */
+  font-family: "Bebas Neue"; /* Applies the "Bebas Neue" font to the text */
+  cursor: pointer; /* Changes the cursor to a hand when hovering over the button */
+}
+
+#start-button:hover {
+  background-color: rgb(
+    254,
+    148,
+    235
+  ); /* Changes start button background to light pink on hover */
+}
+
+#stop-button:hover {
+  background-color: rgb(
+    254,
+    148,
+    235
+  ); /* Changes start button background to light pink on hover */
+}
+
+#reset-button:hover {
+  background-color: rgb(
+    254,
+    148,
+    235
+  ); /* Changes start button background to light pink on hover */
+}
+
+#clock-display {
+  font-size: 80px; /* Makes the clock text very large (80px) */
+  color: rgb(255, 255, 255); /* Sets the clock text color to white */
+  font-family: "Bebas Neue"; /* Applies the "Bebas Neue" font to the stopwatch text */
+  padding: 10px; /* Adds space inside the display around the text */
+}
+
+button {
+  padding: 10px 15px; /* Adds space inside the button */
+  cursor: pointer; /* Changes mouse cursor to pointer when hovering */
+  border: none; /* Removes default browser border */
+  border-radius: 5px; /* Rounds the corners of the button */
+  background-color: rgb(
+    255,
+    255,
+    255
+  ); /* Sets button background color to white */
+  color: rgb(0, 0, 0); /* Sets text color to black */
+}
+
+.dark-mode button {
+  background-color: rgb(
+    60,
+    31,
+    60
+  ); /* Dark purple background for buttons in dark mode */
+  color: white; /* White text for better contrast in dark mode */
+}
+
+@media (max-width: 600px) {
+  #stopwatch-container {
+    flex-direction: column; /* Stack the items vertically */
+    gap: 15px; /* Add space between elements */
+    width: 100%; /* Make it responsive */
+  }
+
+  #clock-display {
+    font-size: 50px; /* smaller font so it fits nicely */
+  }
+
+  .timer-button {
+    width: 80%; /* Buttons stretch nicely */
+    max-width: 200px;
+  }
+}

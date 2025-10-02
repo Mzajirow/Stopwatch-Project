@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./index.css" rel="stylesheet" />
+    <script src="./index.js" defer></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+    <title>Stopwatch</title>
+  </head>
+  <body>
+    <!-- Heading for the stopwatch app -->
+
+    <div id="header">
+      <button id="darkModeToggle">Dark Mode</button>
+    </div>
+
+    <h1>STOPWATCH</h1>
+    <!-- Container that holds the stopwatch display and control buttons -->
+    <div id="stopwatch-container">
+      <!-- Stopwatch display showing hours, minutes, seconds, and milliseconds -->
+      <div id="clock-display">00:00:00:000</div>
+
+      <!-- Button to start the stopwatch -->
+      <button id="start-button" class="timer-button">Start</button>
+
+      <!-- Button to stop/pause the stopwatch -->
+      <button id="stop-button" class="timer-button">Stop</button>
+
+      <!-- Button to reset the stopwatch to 00:00:00:000 -->
+      <button id="reset-button" class="timer-button">Reset</button>
+    </div>
+
+    <!-- Footer text (author credit) -->
+    <h5 id="footer">CREATED BY EJIROGHENE OKPIRIKHRE</h5>
+  </body>
+</html>
