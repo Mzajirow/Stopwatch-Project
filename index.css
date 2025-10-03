@@ -93,21 +93,20 @@ button {
 /* Media query for mobile */
 @media (max-width: 600px) {
   #stopwatch-container {
-    flex-direction: column; /* Stack the items vertically */
-    gap: 15px; /* Add space between elements */
-    width: fit-content; /* Make it responsive */
+    
+    gap: 20px; 
+    width: fit-content; 
   }
 
   #timer-display {
-    font-size: 50px; /* smaller font so it fits nicely */
+    font-size: 50px; 
   }
 
   .timer-button {
-    width: 60%; /* Buttons stretch nicely */
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: space-between;
+    width: fit-content; 
+    height: fit-content;
+    border: 2px solid white;
+    padding: 5px 10px; 
     max-width: 200px;
   }
 }
