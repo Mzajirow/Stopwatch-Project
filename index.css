@@ -9,10 +9,8 @@ body {
   font-family: Verdana; /* Applies Verdana font to all text */
 }
 
-.dark-mode {
-  background-color: #0f000d; /* Sets a very dark purple background when dark mode is active */
-  color: white; /* Changes all text inside to white for contrast */
-
+h1 {
+  text-decoration: underline;
 }
 
 #header {
@@ -54,7 +52,7 @@ body {
     148,
     235
   ); /* Changes start button background to light pink on hover */
-  transform: scale(0.9);     /* Shrinks button to 90% of its size */
+  transform: scale(0.95);     /* Shrinks button to 95% of its size */
   transition: transform 0.2s ease;  /* Smooth animation when shrinking */
 }
 
@@ -64,7 +62,7 @@ body {
     148,
     235
   ); /* Changes start button background to light pink on hover */
-  transform: scale(0.9);     /* Shrinks button to 90% of its size */
+  transform: scale(0.95);     /* Shrinks button to 95% of its size */
   transition: transform 0.2s ease;  /* Smooth animation when shrinking */
 }
 
@@ -74,7 +72,7 @@ body {
     148,
     235
   ); /* Changes start button background to light pink on hover */
-  transform: scale(0.9);     /* Shrinks button to 90% of its size */
+  transform: scale(0.95);     /* Shrinks button to 95% of its size */
   transition: transform 0.2s ease;  /* Smooth animation when shrinking */
 }
 
@@ -96,6 +94,11 @@ button {
     255
   ); /* Sets button background color to white */
   color: rgb(0, 0, 0); /* Sets text color to black */
+}
+
+.dark-mode {
+  background-color: #0f000d; /* Sets a very dark purple background when dark mode is active */
+  color: white; /* Changes all text inside to white for contrast */
 }
 
 .dark-mode button {
