@@ -1,120 +1,104 @@
+@font-face {
+  font-family: "Digital7";
+  src: url("digital.ttf") format("truetype");
+}
+
+/* Style the body */
 body {
-  text-align: center; /* Centers inline text and elements horizontally on the page */
-  color: rgb(255, 255, 255); /* Sets the text color to white */
-  background-color: rgb(
-    95,
-    0,
-    119
-  ); /* Sets the background color to a shade of purple*/
-  font-family: Verdana; /* Applies Verdana font to all text */
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: rgb(95, 0, 119); 
+  font-family:  'Share Tech Mono', monospace;
 }
 
-#header {
-  display: flex; /* Uses flexbox layout for the dark mode toggle button */
-  justify-content: end; /* Aligns the dark mode toggle button to the right end */
-  font-family: Verdana; /* Applies Verdana font style to the header */
+/* Set dark mode colors */
+.dark-mode {
+  background-color: #260121;
+  color: white;
 }
 
+/* Position dark mode toggle button to the extreme right */
+#toggler-con {
+  display: flex;
+  justify-content: end;
+}
+
+/* Style stopwatch container */
 #stopwatch-container {
-  height: fit-content; /* Container height adjusts to fit the stopwatch and controls */
-  width: fit-content; /* Container width adjusts to fit the stopwatch and controls */
-  margin: auto; /* Centers the container horizontally*/
-  max-width: 1280px; /* Ensures container doesn’t stretch beyond 1280px */
-  padding: 20px; /* Adds space inside the container around the content */
-  border: 3px solid; /* Adds a solid border with 3px thickness */
-  border-radius: 5px; /* Rounds the corners of the container */
-  background-color: rgb(
-    247,
-    184,
-    235
-  ); /* Sets a light pink color as the stopwatch background color*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content; 
+  width: fit-content; 
+  margin: auto; 
+  max-width: 1280px; 
+  padding: 20px; 
+  border: 3px solid; 
+  border-radius: 16px; 
+  background-color: rgb(247, 184, 235); 
 }
 
+/* Style clock display */
+#timer-display {
+  font-family: "Digital7", monospace;
+  font-size: 80px; 
+  color: rgb(255, 255, 255);
+  padding: 10px; 
+  margin: 30px 0;
+}
+
+/*Style timer button */
 .timer-button {
-  width: 100px; /* Sets the button width to 100 pixels */
-  height: 30px; /* Sets the button height to 30 pixels */
-  border: 2px solid; /* Adds a solid border with 2px thickness */
-  border-radius: 5%; /* Rounds the button corners by 5% */
-  padding: 5px; /* Adds space inside the button around its text */
-  background-color: purple; /* Sets the button background color to purple */
-  color: rgb(255, 255, 255); /* Sets the button text color to white */
-  font-family: "Bebas Neue"; /* Applies the "Bebas Neue" font to the text */
-  cursor: pointer; /* Changes the cursor to a hand when hovering over the button */
+  width: 100px; 
+  height: 30px; 
+  border: none; 
+  border-radius: 16px; 
+  padding: 5px; 
+  background-color: purple; 
+  color: rgb(255, 255, 255); 
+  cursor: pointer;
 }
 
+/*Apply styling when you hover over the timer buttons*/
 #start-button:hover {
-  background-color: rgb(
-    254,
-    148,
-    235
-  ); /* Changes start button background to light pink on hover */
-  transform: scale(0.95);     /* Shrinks button to 95% of its size */
-  transition: transform 0.2s ease;  /* Smooth animation when shrinking */
+  background-color: rgb(254, 148, 235); 
 }
 
 #stop-button:hover {
-  background-color: rgb(
-    254,
-    148,
-    235
-  ); /* Changes start button background to light pink on hover */
-  transform: scale(0.95);     /* Shrinks button to 95% of its size */
-  transition: transform 0.2s ease;  /* Smooth animation when shrinking */
+  background-color: rgb(254, 148, 235); 
 }
 
 #reset-button:hover {
-  background-color: rgb(
-    254,
-    148,
-    235
-  ); /* Changes start button background to light pink on hover */
-  transform: scale(0.95);     /* Shrinks button to 95% of its size */
-  transition: transform 0.2s ease;  /* Smooth animation when shrinking */
+  background-color: rgb(254, 148, 235); 
 }
 
-#clock-display {
-  font-size: 80px; /* Makes the clock text very large (80px) */
-  color: rgb(255, 255, 255); /* Sets the clock text color to white */
-  font-family: "Bebas Neue"; /* Applies the "Bebas Neue" font to the stopwatch text */
-  padding: 10px; /* Adds space inside the display around the text */
-}
-
+/* Style buttons */
 button {
-  padding: 10px 15px; /* Adds space inside the button */
-  cursor: pointer; /* Changes mouse cursor to pointer when hovering */
-  border: none; /* Removes default browser border */
-  border-radius: 5px; /* Rounds the corners of the button */
-  background-color: rgb(
-    255,
-    255,
-    255
-  ); /* Sets button background color to white */
-  color: rgb(0, 0, 0); /* Sets text color to black */
+  font-family: 'Share Tech Mono', monospace;
+  padding: 10px 15px; 
+  cursor: pointer; 
+  border: none; 
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255); 
+  color: rgb(0, 0, 0); 
 }
 
-.dark-mode {
-  background-color: #0f000d; /* Sets a very dark purple background when dark mode is active */
-  color: white; /* Changes all text inside to white for contrast */
-}
-
+/* Style dark mode button */
 .dark-mode button {
-  background-color: rgb(
-    60,
-    31,
-    60
-  ); /* Dark purple background for buttons in dark mode */
-  color: white; /* White text for better contrast in dark mode */
+  background-color: rgb(60, 31, 60); 
+  color: white; 
 }
 
+/* Media query for mobile */
 @media (max-width: 600px) {
   #stopwatch-container {
     flex-direction: column; /* Stack the items vertically */
     gap: 15px; /* Add space between elements */
-    height: fit-content; /* Container height adjusts to fit the stopwatch and controls */
-    width: fit-content; /* Container width adjusts to fit the stopwatch and controls */
+    width: 100%; /* Make it responsive */
   }
 
-  #clock-display {
+  #timer-display {
     font-size: 50px; /* smaller font so it fits nicely */
   }
 
